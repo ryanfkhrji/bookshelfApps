@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <title>Bookshelf Apps</title>
+
+    <!-- Icon Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header-bar">
+      <h1 class="header-bar-title">Bookshelf Apps</h1>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- Input Book -->
+      <section class="input-section">
+        <h2>Masukan Buku Baru</h2>
+        <form action="#" id="inputBook">
+          <div class="input">
+            <input id="inputBookTitle" type="text" name="inputBookTitle" required placeholder="Judul" />
+          </div>
+          <div class="input">
+            <input id="inputBookAuthor" type="text" name="inputBookAuthor" required placeholder="Penulis" />
+          </div>
+          <div class="input">
+            <input id="inputBookYear" type="number" name="inputBookYear" required placeholder="Tahun Terbit" />
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
+        </form>
+      </section>
+
+      <!-- Serach Book -->
+      <section class="search-section">
+        <h2>Cari Bukumu</h2>
+        <form action="" id="searchBook">
+          <input id="searchBookTitle" type="text" placeholder="Judul Buku" />
+          <button id="searchSubmit" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+              <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+              <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <!-- belum dibaca -->
+      <section class="book-shelf">
+        <h2>Belum Selesai Dibaca</h2>
+        <div id="incompleteBookshelfList" class="book-list"></div>
+      </section>
+
+      <!-- Selesai dibaca -->
+      <section class="book-shelf">
+        <h2>Selesai Dibaca</h2>
+        <div id="completeBookshelfList" class="book-list"></div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer><p>Bookshelf Apps &copy; 2022 - ryan fakhroji</p></footer>
+
+    <!-- Script js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
